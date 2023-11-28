@@ -602,6 +602,7 @@ The next way to associate CSS is to use the HTML style element to define CSS rul
 <body>
   <p>CSS</p>
 </body>
+
 The final way to associate CSS is to use the HTML link element to create a hyperlink reference to an external file containing CSS rules. The link element must appear in the head element of the document.
 
 <link rel="stylesheet" href="styles.css" />
@@ -1212,7 +1213,7 @@ body {
 }
 
 p {
-  width: 50%;
+  width: 50%;padding
   height: 50%;
   display: flex;
   align-items: center;
