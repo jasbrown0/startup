@@ -25,7 +25,10 @@ This is what the previous results look like, the underlined choice is what the u
 - **WebSocket data** - The current poll results will be displayed live as other users vote on the poll.
 
 ## HTML Deliverables
-- **HTML Pages** - Added 3 HTML pages for Login, Voting, and Previous Results
-- **Links** - Have 3 links at the top of each page, the links to vote will not be accessible unless logged in
-- **Text** - All of the votes will be represented with text as well as previous voting results on prev.html
-- ****
+- **HTML Pages** - Added 3 HTML pages for Login, Voting, and Previous Results.
+- **Links** - Have 3 links at the top of each page, the links to vote will not be accessible unless logged in.
+- **Text** - All of the votes will be represented with text as well as previous voting results on prev.html.
+- **Images** - Has an image for each current voting option.
+- **Login** - Input box and submit button for username and password to login.
+- **Database** - Previous votes will be data pulled from the database.
+- **WebSocket** - As voting happens, the current percentage will be presented.
