@@ -24,3 +24,8 @@ This is what the previous results look like, the underlined choice is what the u
 - **Database data** - Poll results for current and past polls are stored in a database as well as login credentials.
 - **WebSocket data** - The current poll results will be displayed live as other users vote on the poll.
 
+## HTML Deliverables
+- **HTML Pages** - Added 3 HTML pages for Login, Voting, and Previous Results
+- **Links** - Have 3 links at the top of each page, the links to vote will not be accessible unless logged in
+- **Text** - All of the votes will be represented with text as well as previous voting results on prev.html
+- ****
