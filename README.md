@@ -28,6 +28,7 @@ This is what the previous results look like, the underlined choice is what the u
 - **HTML Pages** - Added 3 HTML pages for Login, Voting, and Previous Results.
 - **Links** - Have 3 links at the top of each page, the links to vote will not be accessible unless logged in.
 - **Text** - All of the votes will be represented with text as well as previous voting results on prev.html.
+- **3rd Party Service** - Will call a third party service to make a bar that is a part blue, part red for each result
 - **Images** - Has an image for each current voting option.
 - **Login** - Input box and submit button for username and password to login.
 - **Database** - Previous votes will be data pulled from the database.
