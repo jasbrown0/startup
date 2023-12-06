@@ -33,3 +33,11 @@ This is what the previous results look like, the underlined choice is what the u
 - **Login** - Input box and submit button for username and password to login.
 - **Database** - Previous votes will be data pulled from the database.
 - **WebSocket** - As voting happens, the current percentage will be presented.
+
+## CSS Deliverables
+- **Header, footer, and main content body**
+- **Navigation elements** - Stylized the navigation elements
+- **Resizing elements** - all pages respond well to resizing
+- **Application elements** - made a piechart for current results and made the voting page make visual sense
+- **Application text content** - Changed the font and font colors to make sense with the background of each page
+- **Application images** - made the images size to the voter button so that the buttons remains in consistant size and alignment
