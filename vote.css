@@ -4,12 +4,61 @@
     width: 160px;
     height: 160px;
     border: 2px solid #999;
+    padding-bottom: .5em
 }
 
-.dot {
-    height: 25px;
-    width: 25px;
-    background-color: #5e1111;
-    border-radius: 50%;
-    display: inline-block;
-}
+.users {
+    flex: 1;
+    width: 100%;
+    padding: 0.5em;
+  }
+  
+  .username {
+    color: rgb(135, 8, 167);
+  }
+
+  .red-vote {
+    color: rgb(172, 9, 9);
+  }
+  
+  .blue-vote {
+    color: rgb(19, 5, 100);
+  }
+
+  .notification{
+    flex: 1;
+    opacity: 0.7;
+    padding-top: 0.5em;
+  }
+
+  .current-vote{
+    flex: 1;
+    padding-bottom: .5em;
+  }
+
+.picture-box-red {
+    height: calc(200px + 1em);
+    width: calc(220px + 1em);
+    margin-bottom: 1em;
+    padding: 0.5em;
+    background: rgb(172, 9, 9);
+    padding-bottom: 10px;
+    border-radius: 5px;
+  }
+
+  .picture-box-blue {
+    height: calc(200px + 1em);
+    width: calc(220px + 1em);
+    margin-bottom: 1em;
+    padding: 0.5em;
+    background: rgb(19, 5, 100);
+    padding-bottom: 10px;
+    border-radius: 5px;
+  }
+
+
+  #picture img {
+    width: 100%;
+    height: 80%;
+  }
+  

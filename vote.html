@@ -35,26 +35,27 @@
       </nav>
     </header>
 
-    <main class="container-fluid bg-light text-center text-dark">
+    <main class="bg-light text-dark">
       <div class="users">
         User:
         <span class="username">Username placeholder</span>
-      </div>
-      <ul class="notification">
-        <li class="past-notif">Voted for dogs 2 weeks ago</li>
-        <li class="past-notif">Voted for batman 1 week ago</li>
-        <li class="past-notif">New poll!</li>
-      </ul>
+      
+        <div class="notification">
+          <div class="past-notif">Voted for <span class="red-vote">Dogs</span> 2 weeks ago</div>
+          <div class="past-notif">Voted for <span class="blue-vote">Batman</span> 1 week ago</div>
+          <div class="past-notif">New poll!</div>
+        </div>
+    </div>
 
       <!-- More formatting with old style HTML -->
       <br />
 
-      <div>
+      <div class="current-vote text-center">
         <label for="vote">Current Vote</label>
-        <input type="text" id="vote" value="Haven't Voted" readonly />
+        <input class="text-center" type="text" id="vote" value="Haven't Voted" readonly />
       </div>
 
-      <div class="voterpie">
+      <div class="voterpie text-center">
         <br/>
         <br/>
         <br/>
@@ -64,11 +65,11 @@
       <br />
 
       <div>
-        <button>Dark Chocolate
+        <button id="picture" class="picture-box-red text-light">Dark Chocolate
             <img src="https://t4.ftcdn.net/jpg/02/04/31/93/360_F_204319311_NwspQuun2GWdO5KnA8Grgg5CpPczQXPd.jpg" alt="Dark Chocolate"
                 width="200em">
         </button>
-        <button> Milk Chocolate
+        <button id="picture" class="picture-box-blue text-light"> Milk Chocolate
             <img src="https://media.gettyimages.com/id/1224882699/photo/milk-chocolate-isolated-on-white-background.jpg?s=612x612&w=gi&k=20&c=3UUxYSBqbHcDUUZS21OhpbgKM1Bk2f4qq17WwWsHObI=" alt="Dark Chocolate"
                 width="200em">
         </button>
@@ -77,7 +78,7 @@
       <br />
 
       <div>
-        <button>Vote</button>
+        <input class="text-center" type="vote" value="Vote"/>
       </div>
 
     </main>
