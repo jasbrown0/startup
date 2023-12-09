@@ -7,6 +7,7 @@
     <title>Head To Head</title>
     <link rel="icon" href="favicon.ico" />
 
+    <script src="play.js"></script>
     <link rel="stylesheet" href="main.css" />
     <link rel="stylesheet" href="vote.css" />
 
@@ -38,8 +39,12 @@
     <main class="bg-light text-dark">
       <div class="users">
         User:
-        <span class="username">Username placeholder</span>
-      
+        <span id="username"></span>
+        <script>
+          document.getElementById("username").innerHTML = " " +getPlayerName();
+        </script>
+
+
         <div class="notification">
           <div class="past-notif">Voted for <span class="red-vote">Dogs</span> 2 weeks ago</div>
           <div class="past-notif">Voted for <span class="blue-vote">Batman</span> 1 week ago</div>
