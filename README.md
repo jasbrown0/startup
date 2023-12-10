@@ -41,3 +41,9 @@ This is what the previous results look like, the underlined choice is what the u
 - **Application elements** - made a piechart for current results and made the voting page make visual sense
 - **Application text content** - Changed the font and font colors to make sense with the background of each page
 - **Application images** - made the images size to the voter button so that the buttons remains in consistant size and alignment
+
+## JS Deliverables
+- **Login** - Set up login to be saved for future use
+- **Database** - Displays the voting count and current users active 
+- **Websocket** - Added local variables representing future websocket updates from other users votes.
+- **Application Logic** - Added logic to vote page that votes when either option is clicked and updates user current vote count as well as the pie chart.
