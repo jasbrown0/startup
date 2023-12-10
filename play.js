@@ -22,6 +22,12 @@ function increaseBlue(){
     return getPiChart();
 }
 
+function otherVotes(){
+    red++;
+    blue+=2;
+    return getPiChart();
+}
+
 
 function getPiChart(){
     const pieEl = document.querySelector('#piechart');
@@ -43,6 +49,11 @@ function getPiChart(){
     }
     pieEl.style.background = conic.toString();
     pietxt.innerHTML = percentage.toString().concat("% \n", winner);
+
+    localStorage.setItem('red', red);
+    localStorage.setItem('blue', blue);
+    localStorage.setItem('playerRed', playerRed);
+    localStorage.setItem('playerBlue', playerBlue);
 
     const playerVotes = document.querySelector('#vote');
     playerVotes.value = "Red - ".concat(" ", playerRed, " times. Blue - ", playerBlue, " times.");
