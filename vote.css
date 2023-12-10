@@ -4,7 +4,8 @@
     width: 160px;
     height: 160px;
     border: 2px solid #999;
-    padding-bottom: .5em
+    padding-bottom: .5em;
+    margin-bottom: 5em;
 }
 
 .users {
@@ -39,7 +40,7 @@
 .picture-box-red {
     height: calc(200px + 1em);
     width: calc(220px + 1em);
-    margin-bottom: 1em;
+    margin-bottom: 5em;
     padding: 0.5em;
     background: rgb(172, 9, 9);
     padding-bottom: 10px;
@@ -49,7 +50,7 @@
   .picture-box-blue {
     height: calc(200px + 1em);
     width: calc(220px + 1em);
-    margin-bottom: 1em;
+    margin-bottom: 5em;
     padding: 0.5em;
     background: rgb(19, 5, 100);
     padding-bottom: 10px;
@@ -57,7 +58,12 @@
   }
 
 
-  #picture img {
+  #pictureBlue img {
+    width: 100%;
+    height: 80%;
+  }
+
+  #pictureRed img {
     width: 100%;
     height: 80%;
   }

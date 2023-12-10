@@ -3,18 +3,22 @@ function getPlayerName() {
 }
 
 
-var blue = 0;
-var red = 0;
+var blue = 5;
+var red = 3;
+var playerRed = 0;
+var playerBlue = 0;
 
 let pieChart = document.getElementById("piechart");
 
 function increaseRed(){
     red++;
+    playerRed++;
     return getPiChart();
 }
 
 function increaseBlue(){
     blue++;
+    playerBlue++;
     return getPiChart();
 }
 
@@ -30,11 +34,16 @@ function getPiChart(){
     var str4 = 'deg)'
     var conic = str1.concat(str2,str3,str2,str4);
     var percentage = Math.round(ratio * 100);
-    var winner = 'blue'
+    var winner = 'Blue'
     if(percentage > 50){
-        winner = 'red'
+        winner = 'Red'
+    }
+    if(percentage == 50){
+        winner = 'Tie'
     }
     pieEl.style.background = conic.toString();
     pietxt.innerHTML = percentage.toString().concat("% \n", winner);
-    //pieEl.style.background = 'conic-gradient(rgb(19, 5, 100)'+toString(redDeg)+ 'deg, rgb(172, 9, 9)' +toString(redDeg)+'deg)';
+
+    const playerVotes = document.querySelector('#vote');
+    playerVotes.value = "Red - ".concat(" ", playerRed, " times. Blue - ", playerBlue, " times.");
 }
