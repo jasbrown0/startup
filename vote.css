@@ -1,6 +1,6 @@
 .voterpie {
     border-radius: 50%;
-    background: conic-gradient(rgb(19, 5, 100) 270deg, rgb(172, 9, 9) 270deg);
+    background: conic-gradient(rgb(19, 5, 100) 180deg, rgb(172, 9, 9) 180deg);
     width: 160px;
     height: 160px;
     border: 2px solid #999;

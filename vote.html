@@ -60,21 +60,21 @@
         <input class="text-center" type="text" id="vote" value="Haven't Voted" readonly />
       </div>
 
-      <div class="voterpie text-center">
+      <div class="voterpie text-center" id="piechart">
         <br/>
         <br/>
         <br/>
         <br/>
-        <label for="curr" class="text-light">Milk Chocolate <br/> 75%</label>
+        <label for="curr" class="text-light" id="pieText">Milk Chocolate <br/> 75%</label>
       </div>
       <br />
 
       <div class="text-center">
-        <button id="picture" class="picture-box-red text-light">Dark Chocolate
+        <button id="pictureRed" class="picture-box-red text-light" onclick="increaseRed()">Dark Chocolate
             <img src="https://t4.ftcdn.net/jpg/02/04/31/93/360_F_204319311_NwspQuun2GWdO5KnA8Grgg5CpPczQXPd.jpg" alt="Dark Chocolate"
                 width="200em">
         </button>
-        <button id="picture" class="picture-box-blue text-light"> Milk Chocolate
+        <button id="pictureBlue" class="picture-box-blue text-light" onclick="increaseBlue()"> Milk Chocolate
             <img src="https://media.gettyimages.com/id/1224882699/photo/milk-chocolate-isolated-on-white-background.jpg?s=612x612&w=gi&k=20&c=3UUxYSBqbHcDUUZS21OhpbgKM1Bk2f4qq17WwWsHObI=" alt="Dark Chocolate"
                 width="200em">
         </button>
