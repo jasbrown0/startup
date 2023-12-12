@@ -14,12 +14,10 @@ app.use(express.json());
 
 app.use(cookieParser());
 
-
+app.set('trust proxy', true);
 
 // Serve up the frontend static content hosting
 app.use(express.static('public'));
-
-app.set('trust proxy', true);
 
 // Router for service endpoints
 const apiRouter = express.Router();

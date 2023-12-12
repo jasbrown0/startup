@@ -2,11 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- Tell browsers not to scale the viewport automatically -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Head To Head</title>
     <link rel="icon" href="favicon.ico" />
 
-
+    <script src="login.js"></script>
     <link rel="stylesheet" href="main.css" />
 
     <link
@@ -24,6 +25,12 @@
           <li class="nav-item">
             <a class="nav-link active" href="index.html">Home</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="vote.html">Vote</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="prev.html">Previous Results</a>
+          </li>
         </menu>
       </nav>
     </header>
@@ -31,13 +38,12 @@
     <main class="container-fluid bg-light text-center text-dark">
       <div>
         <h1>Welcome</h1>
-        
-        <div id="loginControls" style="display: none">
-          <input class="form-control" type="text" id="userName" placeholder="your@email.com" />
-          <input class="form-control" type="password" id="userPassword" placeholder="password" />
-          <button type="button" class="btn btn-primary" onclick="loginUser()">Login</button>
-          <button type="button" class="btn btn-primary" onclick="createUser()">Create</button>
-        </div>
+        <form id="loginControls" style="display: none" method="get" action="vote.html">
+          <input type="text" id="name" placeholder="Username" />
+          <input type="text" id="pass" placeholder="Password" />
+          <input type="submit" value="Login" onclick="loginUser()"/>
+          <input type="submit" value="Create" onclick="createUser()"/>
+        </form>
         <div id="playControls" style="display: none">
           <div id="playerName"></div>
           <button type="button" class="btn btn-primary" onclick="play()">Play</button>
@@ -53,6 +59,5 @@
         <a class="text-reset" href="https://github.com/jasbrown0/startup">GitHub</a>
       </div>
     </footer>
-    <script src="login.js"></script>
   </body>
 </html>
