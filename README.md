@@ -59,3 +59,9 @@ This is what the previous results look like, the underlined choice is what the u
 - **MongoDB Atlas database created** - done
 - **Endpoints for data** - stubbed out endpoints for processing data and send it to mongo.
 - **Stored data in MongoDB** - done!
+
+## Login deliverables
+- **User registration** - done
+- **Existing user** - done
+- **Use Mongodb to store creds** - done
+- **Restricts functionality** - done
