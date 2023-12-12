@@ -58,3 +58,4 @@ This is what the previous results look like, the underlined choice is what the u
 ## DB deliverable
 - **MongoDB Atlas database created** - done
 - **Endpoints for data** - stubbed out endpoints for processing data and send it to mongo.
+- **Stored data in MongoDB** - done!
