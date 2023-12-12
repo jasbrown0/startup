@@ -33,3 +33,15 @@ app.use((_req, res) => {
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
+
+function updateVotes(playerReds, playerBlues, oldRed, oldBlue) {
+    let votes = [];
+    const redst = oldRed;
+    const bluest = oldBlue;
+
+    votes.insert(0,redst+playerReds);
+    votes.insert(1,bluest+playerBlues);
+
+    return votes;
+    
+  }

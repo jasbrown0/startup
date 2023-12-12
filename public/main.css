@@ -81,6 +81,10 @@ body {
   footer a {
     float: right;
   }
+
+  .quote-box {
+    border-radius: 10px;
+  }
   
   @media (max-height: 600px) {
     header {
