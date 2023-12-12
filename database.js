@@ -15,23 +15,19 @@ const votes = db.collection('votes');
   process.exit(1);
 });
 
-async function updateVotes(score) {
-  const result = await scoreCollection.insertOne(score);
-  return result;
-}
 
-async function setVotes(newReds, newBlues){
-    votes.updateOne(
-        {
-            $inc: {redVotes: newReds, blueVotes: newBlues}
-        }
-    )
-    blueVotes.updateOne
+async function setVotes(source){
+    const original = votes.find().toArray();
+    let red = source.red;
+    let blue = source.blue;
+    votes.updateOne({name: "Master"}, { $inc: {red: red, blue: blue}});
+    //const updates = votes.insertOne(source);
+    return updates;
 }
 
 function getVotes() {
-  const updates = votes.find();
-  return updates.toArray();
+  const updates = votes.find().toArray();
+  return updates;
 }
 
-module.exports = { updateVotes, getVotes };
+module.exports = { setVotes, getVotes };

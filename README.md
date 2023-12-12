@@ -54,3 +54,7 @@ This is what the previous results look like, the underlined choice is what the u
 - **Call to third party service endpoint** - gets random quotes on login page
 - **Backend Service Endpoints** - placeholders for login and endpoints for updating votes
 - **Frontend calls service endpoints** - Gets votes using fetch.
+
+## DB deliverable
+- **MongoDB Atlas database created** - done
+- **Endpoints for data** - stubbed out endpoints for processing data and send it to mongo.

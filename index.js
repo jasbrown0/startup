@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const DB = require('./database.js');
 
 // The service port. In production the frontend code is statically hosted by the service on the same port.
 const port = process.argv.length > 2 ? process.argv[2] : 4000;
@@ -15,14 +16,16 @@ const apiRouter = express.Router();
 app.use(`/api`, apiRouter);
 
 // GetScores
-apiRouter.get('/scores', (_req, res) => {
-  res.send(scores);
+apiRouter.get('/votes', async (_req, res) => {
+    const votes = await DB.getVotes();
+    res.send(votes);
 });
 
 // SubmitScore
-apiRouter.post('/score', (req, res) => {
-  scores = updateScores(req.body, scores);
-  res.send(scores);
+apiRouter.post('/update', async (req, res) => {
+  const payload = DB.setVotes(req.body);
+  const votes = await DB.getVotes();
+  res.send(payload);
 });
 
 // Return the application's default page if the path is unknown
@@ -33,15 +36,3 @@ app.use((_req, res) => {
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
-
-function updateVotes(playerReds, playerBlues, oldRed, oldBlue) {
-    let votes = [];
-    const redst = oldRed;
-    const bluest = oldBlue;
-
-    votes.insert(0,redst+playerReds);
-    votes.insert(1,bluest+playerBlues);
-
-    return votes;
-    
-  }
