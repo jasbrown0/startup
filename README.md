@@ -47,3 +47,10 @@ This is what the previous results look like, the underlined choice is what the u
 - **Database** - Displays the voting count and current users active 
 - **Websocket** - Added local variables representing future websocket updates from other users votes.
 - **Application Logic** - Added logic to vote page that votes when either option is clicked and updates user current vote count as well as the pie chart.
+
+## Service deliverable
+- **Node.js/Express HTTP service** - done
+- **Frontend served using express static middleware** - done
+- **Call to third party service endpoint** - gets random quotes on login page
+- **Backend Service Endpoints** - placeholders for login and endpoints for updating votes
+- **Frontend calls service endpoints** - Gets votes using fetch.
