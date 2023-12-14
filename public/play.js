@@ -43,18 +43,31 @@ var cBlues = 0;
 
 let pieChart = document.getElementById("piechart");
 
+function clickRed(){
+  broadcastEvent(1,0,'RedVote');
+  increaseRed();
+}
+
+function clickBlue(){
+  broadcastEvent(0,1,'BlueVote');
+  increaseBlue();
+}
+
+
 function increaseRed(){
     red++;
     playerRed++;
     cReds++;
-    return getPiChart();
+    broadcastEvent(1,0);
+    getPiChart();
 }
 
 function increaseBlue(){
     blue++;
     playerBlue++;
     cBlues++;
-    return getPiChart();
+    broadcastEvent(0,1);
+    getPiChart();
 }
 
 
@@ -119,3 +132,43 @@ function updateVotesLocal(playerReds, playerBlues) {
     localStorage.setItem('red', redst + playerReds);
     localStorage.setItem('blue', bluest + playerBlues);
   }
+
+
+var socket;
+
+function configureWebSocket() {
+  const protocol = window.location.protocol === 'http:' ? 'ws' : 'wss';
+  socket = new WebSocket(`${protocol}://${window.location.host}/ws`);
+  socket.onopen = (event) => {
+    displayMsg(0, 0, 'connected');
+  };
+  socket.onclose = (event) => {
+    displayMsg(0, 0, 'disconnected');
+  };
+  socket.onmessage = async (event) => {
+    const msg = JSON.parse(await event.data.text());
+    if (msg.type === 'RedVote') {
+      increaseRed();
+    } else if (msg.type === 'BlueVote') {
+      increaseBlue();
+    }
+  };
+}
+
+configureWebSocket();
+
+function displayMsg(cls, from, msg) {
+  const chatText = document.querySelector('#connection');
+  chatText.innerHTML =
+    `<div class="event">${msg}</div>` + chatText.innerHTML;
+}
+
+
+function broadcastEvent(redVote, blueVote, type) {
+  const event = {
+    type: type,
+    red: redVote,
+    blue: blueVote
+  };
+  socket.send(JSON.stringify(event));
+}
