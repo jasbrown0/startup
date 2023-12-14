@@ -65,3 +65,9 @@ This is what the previous results look like, the underlined choice is what the u
 - **Existing user** - done
 - **Use Mongodb to store creds** - done
 - **Restricts functionality** - done
+
+## Websockets
+- **Backend listens for WebSocket connection** - done !
+- **Frontend makes WebSocket connection** - done !
+- **Data sent over WebSocket connection** - done!
+- **WebSocket data displayed** - Piechart updates to clicks in real time!
