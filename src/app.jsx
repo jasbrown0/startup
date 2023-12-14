@@ -25,16 +25,18 @@ export default function App() {
                     Login
                 </NavLink>
             </li>
+            {authState === AuthState.Authenticated && (
             <li className='nav-item'>
                 <NavLink className='nav-link' to='Vote'>
                     Vote
                 </NavLink>
-            </li>
+            </li>)}
+            {authState === AuthState.Authenticated && (
             <li className='nav-item'>
                 <NavLink className='nav-link' to='prev'>
                     Previous
                 </NavLink>
-            </li>
+            </li>)}
         </menu>
       </nav>
     </header>

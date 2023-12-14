@@ -28,6 +28,7 @@ function getUserByToken(token) {
 }
   
 async function createUser(email, password) {
+    console.log(password);
     const passwordHash = await bcrypt.hash(password, 10);
   
     const user = {
@@ -50,7 +51,7 @@ async function setVotes(source){
     let blue = source.blue;
     votes.updateOne({name: "Master"}, { $inc: {red: red, blue: blue}});
     //const updates = votes.insertOne(source);
-    return updates;
+    //return updates;
 }
 
 function getVotes() {

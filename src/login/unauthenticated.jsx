@@ -17,8 +17,6 @@ export function Unauthenticated(props) {
   }
 
   async function loginOrCreate(endpoint) {
-    const userName = document.querySelector('#userName')?.value;
-    const password = document.querySelector('#userPassword')?.value;
     const response = await fetch(endpoint, {
       method: 'post',
       body: JSON.stringify({email: userName, password: password}),
@@ -51,7 +49,6 @@ export function Unauthenticated(props) {
           <input
             className='form-control'
             type='password'
-            value={password}
             onChange={(e) => setPassword(e.target.value)}
             placeholder='password'
           />
