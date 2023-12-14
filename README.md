@@ -71,3 +71,9 @@ This is what the previous results look like, the underlined choice is what the u
 - **Frontend makes WebSocket connection** - done !
 - **Data sent over WebSocket connection** - done!
 - **WebSocket data displayed** - Piechart updates to clicks in real time!
+
+## React
+- **Bundled using WebPack and Babel** - done !
+- **Components** - Login, Vote count, and Quote are all react components
+- **React Router** - Routing between pages handled by router
+- **Hooks** - Hooks used by Quote, red voting, and blue voting
