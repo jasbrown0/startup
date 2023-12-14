@@ -58,7 +58,7 @@ export default function App() {
             }
             exact
           />
-    <Route path='/vote' element={<Vote />} />
+    <Route path='/vote' element={<Vote userName={userName}/>} />
     <Route path='/prev' element={<Prev />} />
     <Route path='*' element={<NotFound />} />
 
